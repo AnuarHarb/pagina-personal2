@@ -1,11 +1,65 @@
-body {
-  background-color: lightblue;
+@font-face {
+  font-family: signal;
+  src: url('tipografias/signal.ttf');
 }
 
-img {
-  width: 200px;
+:root {
+  --primary-color: #484041;
+  --highlight-color: #B5F44A;
+
+  --header-height: 15vh;
 }
 
-.titulo {
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--primary-color);
+  height: var(--header-height);
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  color: var(--highlight-color);
+  font-family: signal;
+  text-align: center;
+}
+
+.content {
+  background-color: lightgray;
+  box-sizing: border-box;
+  display: inline-block;
+  height: calc(100vh - (var(--header-height)* 2 ));
+  padding: 40px;
+  overflow: scroll;
+  vertical-align: top;
+  width: 33vw;
+}
+
+.content img {
+  width: 50%;
+}
+
+.content h2 {
+  color: #434371;
+  font-family: signal;
+  font-size: 45px;
+}
+
+.content p {
+  color: var(--primary-color);
+  font-family: arial;
+}
+
+.footer {
+  background-color: #23e1ff;
+  text-align: center;
+  font-family: arial;
+  font-size: 10px;
+  height: var(--header-height);
+  padding-top: 30px;
+  box-sizing: border-box;
 }
